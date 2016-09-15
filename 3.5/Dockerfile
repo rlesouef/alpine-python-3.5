@@ -20,4 +20,4 @@ RUN cd /usr/bin \
   && ln -sf python-config3.5 python-config \
   && ln -sf pip3.5 pip
 
-CMD python
+CMD ["python"]
