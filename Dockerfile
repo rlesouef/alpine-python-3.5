@@ -19,5 +19,7 @@ RUN cd /usr/bin \
   && ln -sf python3.5 python \
   && ln -sf python-config3.5 python-config \
   && ln -sf pip3.5 pip
+  
+RUN pip install --no-cache-dir virtualenv
 
 CMD ["python"]
