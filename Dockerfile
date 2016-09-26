@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+MAINTAINER Open Source Services [opensourceservices.fr]
+
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
   && apk add --update \
               musl \
