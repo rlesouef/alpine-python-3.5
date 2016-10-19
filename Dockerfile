@@ -10,8 +10,8 @@ RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/
               python3-dev \
               postgresql-dev \
               bash \
-              git \
-  && pip3.5 install --upgrade pip \
+              bash \
+  && pip3 install --no-cache-dir --upgrade --force-reinstall pip \
   && rm /var/cache/apk/*
 
 RUN cd /usr/bin \
@@ -19,9 +19,9 @@ RUN cd /usr/bin \
   && ln -sf idle3.5 idle \
   && ln -sf pydoc3.5 pydoc \
   && ln -sf python3.5 python \
-  && ln -sf python-config3.5 python-config \
+  && ln -sf python3.5-config python-config \
   && ln -sf pip3.5 pip
-  
+
 RUN pip install --no-cache-dir virtualenv
 
 CMD ["python"]
