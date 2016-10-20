@@ -40,6 +40,7 @@ RUN set -ex \
 		readline-dev \
 		sqlite-dev \
 		postgresql-dev \
+		libpq-dev \		
 		zlib-dev \
 	&& cd /usr/src/python \
 	&& ./configure --enable-shared --enable-unicode=ucs4 \
