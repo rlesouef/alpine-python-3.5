@@ -6,10 +6,11 @@ RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/
   && apk add --update \
               musl \
               build-base \
+              linux-headers \
+              ca-certificates \
               python3 \
               python3-dev \
               postgresql-dev \
-              bash \
               bash \
   && pip3 install --no-cache-dir --upgrade --force-reinstall pip \
   && rm /var/cache/apk/*
